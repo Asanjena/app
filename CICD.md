@@ -43,3 +43,18 @@ Bamboo: Bamboo is an Atlassian product that provides CI/CD capabilities. It allo
 Azure DevOps: Azure DevOps, formerly known as Visual Studio Team Services (VSTS), is a comprehensive platform by Microsoft that includes source control, project management, and CI/CD capabilities. It provides a range of tools and services for building, testing, and deploying applications on Microsoft Azure.
 
 TeamCity: TeamCity is a CI/CD server by JetBrains that offers robust features for building, testing, and deploying applications. It supports various programming languages and provides extensive customization options.
+
+
+## Connecting projects and automating agent to master node
+
+1. On Github, go to the repo (with the app folder for this demo) and nagivate to settings > deploy keys. Then click on 'add deploy key'
+![Alt text](images/1.PNG)
+
+2. Add in the you key's name and paste in the key output (remeber to do this for yout public key only)
+![Alt text](images/2.PNG)
+
+3. Go back to jenkins and create a new freestyle project (remember to give it a name) 
+![Alt text](images/3.PNG)
+
+4. 
+![Alt text](images/4.PNG)
