@@ -60,29 +60,29 @@ TeamCity: TeamCity is a CI/CD server by JetBrains that offers robust features fo
 ![Alt text](images/4.PNG)
 
 
-5.![Alt text](images/5i.PNG)
+5.Next, select 'GitHub project' and copy your repo's HTTP url (from GitHub) and paste it into the project URL section
+![Alt text](images/5i.PNG)
 
-6.![Alt text](images/6.PNG)
+6. Choose 'Git' as the 'Source Code Management' and copy the SSH link of your GitHub repository and paste it into 'Repository URL'. You can then add a new SSH key by clicking the 'add' button
 
-7.![Alt text](images/7.PNG)
+We can then select 'SSH Username with private key' and enter an ID for the key and the Private key itself by pasting in our private key, clicking 'Add' when finished.
+
+![Alt text](images/private-key.PNG)
 
 8.![Alt text](images/8.PNG)
 
 9.![Alt text](images/9.PNG)
 
-10.![Alt text](images/10.PNG)
 
-11.![Alt text](images/11.PNG)
-
-###  Seeting up Webhook with GitHub and Jenkins
+##  Setting up Webhook with GitHub and Jenkins
 
 1. Go to your GitHub repository and click on ‘Settings’.
 
 2.  Click on Webhooks and then click on ‘Add webhook’.
 
-3. In the ‘Payload URL’ field, paste your Jenkins environment URL. At the end of this URL add /github-webhook/. In the ‘Content type’ select: ‘application/json’ and leave the ‘Secret’ field empty.
-
 ![Alt text](../aws_s3/w1.PNG)
+
+3. In the ‘Payload URL’ field, paste your Jenkins environment URL. At the end of this URL add /github-webhook/. In the ‘Content type’ select: ‘application/json’ and leave the ‘Secret’ field empty.
 
 4.  In the page ‘Which events would you like to trigger this webhook?’ choose 'just push the event' and click on ‘add webhook’.
 
@@ -93,6 +93,8 @@ In configuration settings, got o Office 365 Connectors, and tick 'restrict where
 ![Alt text](images/w2.PNG)
 
 7. Click on the ‘Build Triggers’ tab and then on the ‘GitHub hook trigger for GITScm polling’. This is to let Jenkins listen to GitHub for any changes/ pushes made 
+
+![Alt text](images/9.PNG)
 
 8. Click on the ‘Build’ tab, then click on ‘Add build step’ and choose ‘Execute shell’.
 
