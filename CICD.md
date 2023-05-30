@@ -58,3 +58,39 @@ TeamCity: TeamCity is a CI/CD server by JetBrains that offers robust features fo
 
 4. 
 ![Alt text](images/4.PNG)
+
+
+5.
+
+6.
+
+7.
+
+8.
+
+9.
+
+10.
+
+11.
+
+### how to set up a webhook with GitHub and Jenkins
+
+1. go to your GitHub repository and click on ‘Settings’.
+
+2.  Click on Webhooks and then click on ‘Add webhook’.
+
+3. In the ‘Payload URL’ field, paste your Jenkins environment URL. At the end of this URL add /github-webhook/. In the ‘Content type’ select: ‘application/json’ and leave the ‘Secret’ field empty.
+
+4.  In the page ‘Which events would you like to trigger this webhook?’ choose ‘Let me select individual events.’ Then, check ‘Pull Requests’ and ‘Pushes’. At the end of this option, make sure that the ‘Active’ option is checked and click on ‘Add webhook’.
+
+5. Step 5: In Jenkins, click on ‘New Item’ to create a new project. Give your project a name, then choose ‘Freestyle project’ and finally, click on ‘OK’.
+
+6.  Click on the ‘Source Code Management’ tab. Click on Git and paste your GitHub repository URL in the ‘Repository URL’ field.
+
+7. Click on the ‘Build Triggers’ tab and then on the ‘GitHub hook trigger for GITScm polling’. Or, choose the trigger of your choice.
+
+8. Click on the ‘Build’ tab, then click on ‘Add build step’ and choose ‘Execute shell’.
+
+
+
