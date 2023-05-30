@@ -60,37 +60,45 @@ TeamCity: TeamCity is a CI/CD server by JetBrains that offers robust features fo
 ![Alt text](images/4.PNG)
 
 
-5.
+5.![Alt text](images/5i.PNG)
 
-6.
+6.![Alt text](images/6.PNG)
 
-7.
+7.![Alt text](images/7.PNG)
 
-8.
+8.![Alt text](images/8.PNG)
 
-9.
+9.![Alt text](images/9.PNG)
 
-10.
+10.![Alt text](images/10.PNG)
 
-11.
+11.![Alt text](images/11.PNG)
 
-### how to set up a webhook with GitHub and Jenkins
+###  Seeting up Webhook with GitHub and Jenkins
 
-1. go to your GitHub repository and click on ‘Settings’.
+1. Go to your GitHub repository and click on ‘Settings’.
 
 2.  Click on Webhooks and then click on ‘Add webhook’.
 
 3. In the ‘Payload URL’ field, paste your Jenkins environment URL. At the end of this URL add /github-webhook/. In the ‘Content type’ select: ‘application/json’ and leave the ‘Secret’ field empty.
 
-4.  In the page ‘Which events would you like to trigger this webhook?’ choose ‘Let me select individual events.’ Then, check ‘Pull Requests’ and ‘Pushes’. At the end of this option, make sure that the ‘Active’ option is checked and click on ‘Add webhook’.
+![Alt text](../aws_s3/w1.PNG)
 
-5. Step 5: In Jenkins, click on ‘New Item’ to create a new project. Give your project a name, then choose ‘Freestyle project’ and finally, click on ‘OK’.
+4.  In the page ‘Which events would you like to trigger this webhook?’ choose 'just push the event' and click on ‘add webhook’.
 
-6.  Click on the ‘Source Code Management’ tab. Click on Git and paste your GitHub repository URL in the ‘Repository URL’ field.
+5. In Jenkins, create a new job. Following our previous steps
 
-7. Click on the ‘Build Triggers’ tab and then on the ‘GitHub hook trigger for GITScm polling’. Or, choose the trigger of your choice.
+In configuration settings, got o Office 365 Connectors, and tick 'restrict where this project can be run' and enter the name of the Master Node
+
+![Alt text](images/w2.PNG)
+
+7. Click on the ‘Build Triggers’ tab and then on the ‘GitHub hook trigger for GITScm polling’. This is to let Jenkins listen to GitHub for any changes/ pushes made 
 
 8. Click on the ‘Build’ tab, then click on ‘Add build step’ and choose ‘Execute shell’.
+
+9. In the build section, enter our commands to perform the tests. These will be triggered everytime the GitHub repo is updated. 
+
+![Alt text](images/w3.PNG)
 
 
 
