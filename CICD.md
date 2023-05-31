@@ -8,7 +8,7 @@ CDe - Cintinuous deployment
 
  ![Alt text](images/CICD_Pipeline.webp)
 
- 1.Code is developed locally. Once it's developed, we set up ssh locally and push the code/ what we have developed to e.g. a repo on github. We then need something to test the code using an automation server. But before this, we need something to notify us when a change has been made and pushed. This is known as a web hook.
+ 1.Code is developed locally. Once it's developed, we set up ssh locally and push the code/ what we have developed to e.g. a repo on github. We then need something to test the code using an automation server. But before this, we need something to notify us when a change has been made and pushed. This is known as a webhook.
 
  A webhook is a mechanism that allows real-time communication between two systems, enabling one system to send automated notifications or data to another system based on certain events or triggers
 
@@ -20,7 +20,7 @@ CDe - Cintinuous deployment
 
  ## Jenkins 
 
-Jenkins is an open-source automation server that helps in building, deploying, and automating software development processes. It provides a platform for Continuous Integration (CI) and Continuous Deployment (CD) by allowing developers to automate various stages of the software development lifecycle. With Jenkins, developers can define and configure pipelines, perform automated builds and tests, and facilitate the deployment of applications to different environments.
+Jenkins is an open-source automation server that helps in building, deploying, and automating software development processes. It provides a platform for Continuous Integration (CI) and Continuous Delivery/ Deployment (CD) by allowing developers to automate various stages of the software development lifecycle. With Jenkins, developers can define and configure pipelines, perform automated builds and tests, and facilitate the deployment of applications to different environments.
 
 ![Alt text](images/jenkins.png)
 
@@ -56,11 +56,11 @@ TeamCity: TeamCity is a CI/CD server by JetBrains that offers robust features fo
 3. Go back to jenkins and create a new freestyle project (remember to give it a name) 
 ![Alt text](images/3.PNG)
 
-4. 
+4. You can select the max number of build that you would like to keep at a time
 ![Alt text](images/4.PNG)
 
 
-5.Next, select 'GitHub project' and copy your repo's HTTP url (from GitHub) and paste it into the project URL section
+5. Next, select 'GitHub project' and copy your repo's HTTP url (from GitHub) and paste it into the project URL section
 ![Alt text](images/5i.PNG)
 
 6. Choose 'Git' as the 'Source Code Management' and copy the SSH link of your GitHub repository and paste it into 'Repository URL'. You can then add a new SSH key by clicking the 'add' button
